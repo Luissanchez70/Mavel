@@ -18,6 +18,7 @@ class HomeViewModel: ObservableObject {
     
     init() {
         getCharacters()
+        getComics()
     }
     
     func getCharacters() {
@@ -47,7 +48,7 @@ class HomeViewModel: ObservableObject {
             case .finished:
                 return
             case .failure(let error):
-                print("1 --> Error \(error.localizedDescription)")
+                print("2 --> Error \(error)")
             }
         } receiveValue: { listOfComics in
             

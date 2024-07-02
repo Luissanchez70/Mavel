@@ -19,6 +19,6 @@ struct ComicData: Decodable {
 struct Comic: Decodable {
     let id: Int
     let title: String
-    let description: String
+    let description: String?
     let thumbnail: Thumbnail
 }

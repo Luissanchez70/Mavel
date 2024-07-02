@@ -9,25 +9,20 @@ import SwiftUI
 
 struct CharacterCell: View {
     
-    var thumbnailURL: String = "" {
-        didSet {
-            thumbnailURL = thumbnailURL.replacingOccurrences(of: "http", with: "https") + ".jpg"
-            print("--> \(thumbnailURL)")
-        }
-    }
+    var thumbnailURL: String
     var title: String
     var description: String
     
     init(character: Character) {
-        self.thumbnailURL = character.thumbnail.path
+        self.thumbnailURL = character.thumbnail.path.replacingOccurrences(of: "http", with: "https") + "." + character.thumbnail.extension
         self.title = character.name
         self.description = character.description
     }
     
     init(comic: Comic) {
-        self.thumbnailURL = comic.thumbnail.path
+        self.thumbnailURL = comic.thumbnail.path.replacingOccurrences(of: "http", with: "https") + "." + comic.thumbnail.extension
         self.title = comic.title
-        self.description = comic.description
+        self.description = comic.description ?? "Without description"
     }
     
     var body: some View {
@@ -45,6 +40,7 @@ struct CharacterCell: View {
                     .font(.system(size: 11, weight: .bold))
                     .lineLimit(1)
             }.padding()
+            
         }.frame(width: 130, height: 200)
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 25))

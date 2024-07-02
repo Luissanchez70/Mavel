@@ -125,9 +125,9 @@
 		D25EE0142C32D0D3002A34E8 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				D25EE03F2C32D149002A34E8 /* Service */,
 				D24C49712C33D917005160B6 /* UseCases */,
 				D25EE0482C32DC51002A34E8 /* Model */,
-				D25EE03F2C32D149002A34E8 /* Service */,
 				D25EE0152C32D0D3002A34E8 /* MarvelApp.swift */,
 				D25EE0172C32D0D3002A34E8 /* HomeView.swift */,
 				D24C496F2C33D8CA005160B6 /* HomeViewModel.swift */,
