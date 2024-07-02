@@ -7,16 +7,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
-        Text("·")
+        
+        NavigationView {
+            VStack {
+                List {
+                    
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
   
