@@ -12,9 +12,9 @@ class HomeViewModel: ObservableObject {
     
     private var getCharacterUseCase = GetCharacterUseCase()
     private var getComicsUseCase = GetComicsUseCase()
-    var cancellable: Set<AnyCancellable> = []
-    @Published var listOfChracters: [Character] = []
-    @Published var listOfComics: [Comic] = []
+    private var cancellable: Set<AnyCancellable> = []
+    @Published var listOfChracters: [ResourceItem] = []
+    @Published var listOfComics: [ResourceItem] = []
     
     init() {
         getCharacters()
@@ -34,7 +34,7 @@ class HomeViewModel: ObservableObject {
             
             if !listOfCharacters.isEmpty {
                 DispatchQueue.main.async {
-                    self.listOfChracters = listOfCharacters
+                    self.listOfChracters = listOfCharacters.map{ ResourceItem($0) }
                 }
             }
         }.store(in: &cancellable)
@@ -54,7 +54,7 @@ class HomeViewModel: ObservableObject {
             
             if !listOfComics.isEmpty {
                 DispatchQueue.main.async {
-                    self.listOfComics = listOfComics
+                    self.listOfComics = listOfComics.map{ ResourceItem($0) }
                 }
             }
         }.store(in: &cancellable)

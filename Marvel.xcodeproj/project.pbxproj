@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D24C49702C33D8CA005160B6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C496F2C33D8CA005160B6 /* HomeViewModel.swift */; };
 		D24C49732C33D92B005160B6 /* GetCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C49722C33D92B005160B6 /* GetCharacterUseCase.swift */; };
-		D24C49752C33DEFD005160B6 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C49742C33DEFC005160B6 /* CharacterCell.swift */; };
+		D24C49752C33DEFD005160B6 /* ResourceItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C49742C33DEFC005160B6 /* ResourceItemCell.swift */; };
 		D24C49772C34012C005160B6 /* GetComicsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C49762C34012C005160B6 /* GetComicsUseCase.swift */; };
 		D24C49792C340156005160B6 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C49782C340156005160B6 /* Comic.swift */; };
 		D24C497B2C34016A005160B6 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C497A2C34016A005160B6 /* Thumbnail.swift */; };
@@ -26,6 +26,7 @@
 		D25EE0472C32D703002A34E8 /* URLSession+Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EE0462C32D702002A34E8 /* URLSession+Client.swift */; };
 		D25EE04B2C32DC71002A34E8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EE04A2C32DC71002A34E8 /* Character.swift */; };
 		D29249FD2C343F5D005F0457 /* Carrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29249FC2C343F5D005F0457 /* Carrousel.swift */; };
+		D2924A012C344854005F0457 /* ResourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2924A002C344854005F0457 /* ResourceItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,7 @@
 /* Begin PBXFileReference section */
 		D24C496F2C33D8CA005160B6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D24C49722C33D92B005160B6 /* GetCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterUseCase.swift; sourceTree = "<group>"; };
-		D24C49742C33DEFC005160B6 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		D24C49742C33DEFC005160B6 /* ResourceItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItemCell.swift; sourceTree = "<group>"; };
 		D24C49762C34012C005160B6 /* GetComicsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicsUseCase.swift; sourceTree = "<group>"; };
 		D24C49782C340156005160B6 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		D24C497A2C34016A005160B6 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		D25EE0462C32D702002A34E8 /* URLSession+Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Client.swift"; sourceTree = "<group>"; };
 		D25EE04A2C32DC71002A34E8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D29249FC2C343F5D005F0457 /* Carrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrousel.swift; sourceTree = "<group>"; };
+		D2924A002C344854005F0457 /* ResourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +109,7 @@
 		D24C497C2C341AC2005160B6 /* View+ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D29249FB2C343F47005F0457 /* UIComponents */,
-				D25EE0172C32D0D3002A34E8 /* HomeView.swift */,
-				D24C496F2C33D8CA005160B6 /* HomeViewModel.swift */,
+				D2924A022C344B24005F0457 /* Home */,
 			);
 			path = "View+ViewModel";
 			sourceTree = "<group>";
@@ -142,7 +142,6 @@
 				D25EE0482C32DC51002A34E8 /* Model */,
 				D24C497C2C341AC2005160B6 /* View+ViewModel */,
 				D25EE0152C32D0D3002A34E8 /* MarvelApp.swift */,
-				D24C49742C33DEFC005160B6 /* CharacterCell.swift */,
 				D25EE0192C32D0D4002A34E8 /* Assets.xcassets */,
 				D25EE01B2C32D0D4002A34E8 /* Preview Content */,
 			);
@@ -199,6 +198,7 @@
 				D25EE04A2C32DC71002A34E8 /* Character.swift */,
 				D24C49782C340156005160B6 /* Comic.swift */,
 				D24C497A2C34016A005160B6 /* Thumbnail.swift */,
+				D2924A002C344854005F0457 /* ResourceItem.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -206,9 +206,20 @@
 		D29249FB2C343F47005F0457 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				D24C49742C33DEFC005160B6 /* ResourceItemCell.swift */,
 				D29249FC2C343F5D005F0457 /* Carrousel.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		D2924A022C344B24005F0457 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D29249FB2C343F47005F0457 /* UIComponents */,
+				D25EE0172C32D0D3002A34E8 /* HomeView.swift */,
+				D24C496F2C33D8CA005160B6 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,9 +359,10 @@
 				D24C49702C33D8CA005160B6 /* HomeViewModel.swift in Sources */,
 				D25EE0182C32D0D3002A34E8 /* HomeView.swift in Sources */,
 				D24C497B2C34016A005160B6 /* Thumbnail.swift in Sources */,
-				D24C49752C33DEFD005160B6 /* CharacterCell.swift in Sources */,
+				D24C49752C33DEFD005160B6 /* ResourceItemCell.swift in Sources */,
 				D24C49772C34012C005160B6 /* GetComicsUseCase.swift in Sources */,
 				D24C49732C33D92B005160B6 /* GetCharacterUseCase.swift in Sources */,
+				D2924A012C344854005F0457 /* ResourceItem.swift in Sources */,
 				D25EE0472C32D703002A34E8 /* URLSession+Client.swift in Sources */,
 				D25EE0162C32D0D3002A34E8 /* MarvelApp.swift in Sources */,
 				D29249FD2C343F5D005F0457 /* Carrousel.swift in Sources */,
