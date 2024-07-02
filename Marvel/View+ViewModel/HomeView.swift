@@ -10,19 +10,17 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
+    @State var currentIndext: Int = 0
+    @State var timer: Timer?
+    
+    
     var body: some View {
         
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Characters")
-                ScrollView(.horizontal) {
-                    LazyHGrid(rows: [GridItem(.flexible())], spacing: 16){
-                        ForEach(viewModel.listOfChracters, id: \.id) { character in
-                            CharacterCell(character: character)
-                        }
-                    }.frame(maxHeight: 220)
-                }
-                Text("Comics")
+                Text("Characters").font(.title)
+                Carrousel(listOfChracters: viewModel.listOfChracters)
+                Text("Comics").font(.title)
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: [GridItem(.flexible())], spacing: 16){
                         ForEach(viewModel.listOfComics, id: \.id) { comic in
@@ -30,6 +28,9 @@ struct HomeView: View {
                         }
                     }.frame(maxHeight: 220)
                 }
+                
+                Spacer()
+                
             }.padding()
 
         }

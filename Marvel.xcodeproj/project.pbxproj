@@ -25,6 +25,7 @@
 		D25EE0452C32D594002A34E8 /* URLRequest+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EE0442C32D594002A34E8 /* URLRequest+init.swift */; };
 		D25EE0472C32D703002A34E8 /* URLSession+Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EE0462C32D702002A34E8 /* URLSession+Client.swift */; };
 		D25EE04B2C32DC71002A34E8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EE04A2C32DC71002A34E8 /* Character.swift */; };
+		D29249FD2C343F5D005F0457 /* Carrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29249FC2C343F5D005F0457 /* Carrousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		D25EE0442C32D594002A34E8 /* URLRequest+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+init.swift"; sourceTree = "<group>"; };
 		D25EE0462C32D702002A34E8 /* URLSession+Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Client.swift"; sourceTree = "<group>"; };
 		D25EE04A2C32DC71002A34E8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		D29249FC2C343F5D005F0457 /* Carrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,16 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		D24C497C2C341AC2005160B6 /* View+ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D29249FB2C343F47005F0457 /* UIComponents */,
+				D25EE0172C32D0D3002A34E8 /* HomeView.swift */,
+				D24C496F2C33D8CA005160B6 /* HomeViewModel.swift */,
+			);
+			path = "View+ViewModel";
+			sourceTree = "<group>";
+		};
 		D25EE0092C32D0D3002A34E8 = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +140,8 @@
 				D25EE03F2C32D149002A34E8 /* Service */,
 				D24C49712C33D917005160B6 /* UseCases */,
 				D25EE0482C32DC51002A34E8 /* Model */,
+				D24C497C2C341AC2005160B6 /* View+ViewModel */,
 				D25EE0152C32D0D3002A34E8 /* MarvelApp.swift */,
-				D25EE0172C32D0D3002A34E8 /* HomeView.swift */,
-				D24C496F2C33D8CA005160B6 /* HomeViewModel.swift */,
 				D24C49742C33DEFC005160B6 /* CharacterCell.swift */,
 				D25EE0192C32D0D4002A34E8 /* Assets.xcassets */,
 				D25EE01B2C32D0D4002A34E8 /* Preview Content */,
@@ -190,6 +201,14 @@
 				D24C497A2C34016A005160B6 /* Thumbnail.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		D29249FB2C343F47005F0457 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D29249FC2C343F5D005F0457 /* Carrousel.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +353,7 @@
 				D24C49732C33D92B005160B6 /* GetCharacterUseCase.swift in Sources */,
 				D25EE0472C32D703002A34E8 /* URLSession+Client.swift in Sources */,
 				D25EE0162C32D0D3002A34E8 /* MarvelApp.swift in Sources */,
+				D29249FD2C343F5D005F0457 /* Carrousel.swift in Sources */,
 				D25EE0432C32D25C002A34E8 /* URLComponents+init.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
