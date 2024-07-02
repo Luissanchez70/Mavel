@@ -11,7 +11,7 @@ import Combine
 extension URLSession {
     
     func fetch<Response: Decodable>(urlRequest: URLRequest, type: Response.Type) -> AnyPublisher<Response, Error> {
-        
+        print(urlRequest)
         return self.dataTaskPublisher(for: urlRequest)
             .tryMap(processResponse)
             .decode(type: type.self, decoder: JSONDecoder())

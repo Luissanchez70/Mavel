@@ -17,7 +17,7 @@ extension URLComponents: Mapleable {
         self.init()
         self.scheme = schame
         self.host = host
-        self.path = path
+        self.path = "/v1/public\(path)"
         self.queryItems = [URLQueryItem(name: "ts", value: URLComponents.ts),
                            URLQueryItem(name: "apikey", value: URLComponents.apikey),
                            URLQueryItem(name: "hash", value: URLComponents.hash)]
