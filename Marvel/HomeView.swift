@@ -21,17 +21,17 @@ struct HomeView: View {
                         ForEach(viewModel.listOfChracters, id: \.id) { character in
                             CharacterCell(character: character)
                         }
-                    }
+                    }.frame(maxHeight: 220)
                 }
                 Text("Comics")
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: rows, spacing: 16){
-                        ForEach(viewModel.listOfChracters, id: \.id) { character in
-                            CharacterCell(character: character)
+                        ForEach(viewModel.listOfComics, id: \.id) { comic in
+                            CharacterCell(comic: comic)
                         }
-                    }
+                    }.frame(maxHeight: 220)
                 }
-            }
+            }.padding()
 
         }
                     

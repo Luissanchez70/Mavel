@@ -9,10 +9,30 @@ import SwiftUI
 
 struct CharacterCell: View {
     
-    var character: Character
+    var thumbnailURL: String = "" {
+        didSet {
+            thumbnailURL = thumbnailURL.replacingOccurrences(of: "http", with: "https") + ".jpg"
+            print("--> \(thumbnailURL)")
+        }
+    }
+    var title: String
+    var description: String
+    
+    init(character: Character) {
+        self.thumbnailURL = character.thumbnail.path
+        self.title = character.name
+        self.description = character.description
+    }
+    
+    init(comic: Comic) {
+        self.thumbnailURL = comic.thumbnail.path
+        self.title = comic.title
+        self.description = comic.description
+    }
+    
     var body: some View {
         VStack(alignment: .center) {
-            AsyncImage(url: URL(string: ("\((character.thumbnail.path).replacingOccurrences(of: "http", with: "https")).\(character.thumbnail.extension)"))) { image in
+            AsyncImage(url: URL(string: thumbnailURL)) { image in
                 image.resizable().frame(width: 130, height: 150)
             } placeholder: {
                 ProgressView().frame(width: 130, height: 150)
@@ -21,9 +41,14 @@ struct CharacterCell: View {
             Spacer()
             
             VStack(alignment: .leading) {
-                Text(character.name).font(.system(size: 11, weight: .bold)).lineLimit(1)
+                Text(title)
+                    .font(.system(size: 11, weight: .bold))
+                    .lineLimit(1)
             }.padding()
-        }.frame(width: 130, height: 200).background().shadow(radius: 5)
+        }.frame(width: 130, height: 200)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 25))
+            .shadow(radius: 5)
     }
 }
 

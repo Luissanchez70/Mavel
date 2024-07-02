@@ -10,9 +10,11 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     
-    var getCharacterUseCase = GetCharacterUseCase()
-    var cancellable: AnyCancellable?
+    private var getCharacterUseCase = GetCharacterUseCase()
+    private var getComicsUseCase = GetComicsUseCase()
+    var cancellable: Set<AnyCancellable> = []
     @Published var listOfChracters: [Character] = []
+    @Published var listOfComics: [Comic] = []
     
     init() {
         getCharacters()
@@ -20,7 +22,7 @@ class HomeViewModel: ObservableObject {
     
     func getCharacters() {
         
-        cancellable = getCharacterUseCase.execute().sink { completion in
+        getCharacterUseCase.execute().sink { completion in
             switch completion {
             case .finished:
                 return
@@ -34,7 +36,27 @@ class HomeViewModel: ObservableObject {
                     self.listOfChracters = listOfCharacters
                 }
             }
-        }
+        }.store(in: &cancellable)
+
+    }
+    
+    func getComics() {
+        
+        getComicsUseCase.execute().sink { completion in
+            switch completion {
+            case .finished:
+                return
+            case .failure(let error):
+                print("1 --> Error \(error.localizedDescription)")
+            }
+        } receiveValue: { listOfComics in
+            
+            if !listOfComics.isEmpty {
+                DispatchQueue.main.async {
+                    self.listOfComics = listOfComics
+                }
+            }
+        }.store(in: &cancellable)
 
     }
 }
