@@ -31,4 +31,20 @@ class ResourceItem {
         self.type = .comics
     }
     
+    init(_ event: Event) {
+        self.id = event.id
+        self.title = event.title
+        self.description = event.description ?? "Without Description"
+        self.thumbnailSTR = event.thumbnail.path.replacingOccurrences(of: "http", with: "https") + "." + event.thumbnail.extension
+        self.type = .comics
+    }
+    
+    init(_ serie: Serie) {
+        self.id = serie.id
+        self.title = serie.title
+        self.description = serie.description ?? "Without Description"
+        self.thumbnailSTR = serie.thumbnail.path.replacingOccurrences(of: "http", with: "https") + "." + serie.thumbnail.extension
+        self.type = .comics
+    }
+    
 }

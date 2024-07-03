@@ -31,6 +31,7 @@ struct ResourceItemCell: View {
     
             Text(title)
                 .font(.system(size: 11, weight: .bold))
+                .bold()
                 .lineLimit(1)
                 .padding()
          

@@ -29,6 +29,8 @@ struct DetailsView: View {
                 .font(.body)
                 .multilineTextAlignment(.leading)
             
+            
+            ListItem(resourcesList: $viewModel.resourcesList)
 
             
         }.padding()

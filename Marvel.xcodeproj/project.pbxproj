@@ -28,6 +28,13 @@
 		D27BC3D72C35222600A50906 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3D62C35222600A50906 /* DetailsView.swift */; };
 		D27BC3D92C352CDD00A50906 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3D82C352CDD00A50906 /* DetailsViewModel.swift */; };
 		D27BC3DB2C352DA400A50906 /* TypeOfItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3DA2C352DA400A50906 /* TypeOfItem.swift */; };
+		D27BC3DD2C3540B200A50906 /* GetResourseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3DC2C3540B200A50906 /* GetResourseProtocol.swift */; };
+		D27BC3DF2C35466A00A50906 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3DE2C35466A00A50906 /* ListItem.swift */; };
+		D27BC3E12C354B7400A50906 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3E02C354B7400A50906 /* ListCell.swift */; };
+		D27BC3E42C35606600A50906 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3E32C35606600A50906 /* Event.swift */; };
+		D27BC3E62C3560C800A50906 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3E52C3560C800A50906 /* Serie.swift */; };
+		D27BC3E82C3560EA00A50906 /* GetSerieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3E72C3560EA00A50906 /* GetSerieUseCase.swift */; };
+		D27BC3EA2C35616200A50906 /* GetEventUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27BC3E92C35616200A50906 /* GetEventUseCase.swift */; };
 		D29249FD2C343F5D005F0457 /* Carrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29249FC2C343F5D005F0457 /* Carrousel.swift */; };
 		D2924A012C344854005F0457 /* ResourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2924A002C344854005F0457 /* ResourceItem.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +81,13 @@
 		D27BC3D62C35222600A50906 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		D27BC3D82C352CDD00A50906 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		D27BC3DA2C352DA400A50906 /* TypeOfItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfItem.swift; sourceTree = "<group>"; };
+		D27BC3DC2C3540B200A50906 /* GetResourseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResourseProtocol.swift; sourceTree = "<group>"; };
+		D27BC3DE2C35466A00A50906 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		D27BC3E02C354B7400A50906 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		D27BC3E32C35606600A50906 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		D27BC3E52C3560C800A50906 /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		D27BC3E72C3560EA00A50906 /* GetSerieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSerieUseCase.swift; sourceTree = "<group>"; };
+		D27BC3E92C35616200A50906 /* GetEventUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventUseCase.swift; sourceTree = "<group>"; };
 		D29249FC2C343F5D005F0457 /* Carrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrousel.swift; sourceTree = "<group>"; };
 		D2924A002C344854005F0457 /* ResourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +122,9 @@
 			children = (
 				D24C49722C33D92B005160B6 /* GetCharacterUseCase.swift */,
 				D24C49762C34012C005160B6 /* GetComicsUseCase.swift */,
+				D27BC3DC2C3540B200A50906 /* GetResourseProtocol.swift */,
+				D27BC3E72C3560EA00A50906 /* GetSerieUseCase.swift */,
+				D27BC3E92C35616200A50906 /* GetEventUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -207,6 +224,8 @@
 				D25EE04A2C32DC71002A34E8 /* Character.swift */,
 				D24C49782C340156005160B6 /* Comic.swift */,
 				D24C497A2C34016A005160B6 /* Thumbnail.swift */,
+				D27BC3E32C35606600A50906 /* Event.swift */,
+				D27BC3E52C3560C800A50906 /* Serie.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -214,10 +233,20 @@
 		D27BC3D52C3521F000A50906 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				D27BC3E22C3551D800A50906 /* UIComponents */,
 				D27BC3D62C35222600A50906 /* DetailsView.swift */,
 				D27BC3D82C352CDD00A50906 /* DetailsViewModel.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		D27BC3E22C3551D800A50906 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D27BC3DE2C35466A00A50906 /* ListItem.swift */,
+				D27BC3E02C354B7400A50906 /* ListCell.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		D29249FB2C343F47005F0457 /* UIComponents */ = {
@@ -369,15 +398,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27BC3DF2C35466A00A50906 /* ListItem.swift in Sources */,
+				D27BC3E82C3560EA00A50906 /* GetSerieUseCase.swift in Sources */,
 				D25EE0412C32D17E002A34E8 /* Mapleable.swift in Sources */,
 				D24C49792C340156005160B6 /* Comic.swift in Sources */,
+				D27BC3E62C3560C800A50906 /* Serie.swift in Sources */,
+				D27BC3E12C354B7400A50906 /* ListCell.swift in Sources */,
 				D25EE0452C32D594002A34E8 /* URLRequest+init.swift in Sources */,
 				D27BC3DB2C352DA400A50906 /* TypeOfItem.swift in Sources */,
 				D25EE04B2C32DC71002A34E8 /* Character.swift in Sources */,
 				D24C49702C33D8CA005160B6 /* HomeViewModel.swift in Sources */,
 				D25EE0182C32D0D3002A34E8 /* HomeView.swift in Sources */,
 				D24C497B2C34016A005160B6 /* Thumbnail.swift in Sources */,
+				D27BC3EA2C35616200A50906 /* GetEventUseCase.swift in Sources */,
+				D27BC3DD2C3540B200A50906 /* GetResourseProtocol.swift in Sources */,
 				D24C49752C33DEFD005160B6 /* ResourceItemCell.swift in Sources */,
+				D27BC3E42C35606600A50906 /* Event.swift in Sources */,
 				D24C49772C34012C005160B6 /* GetComicsUseCase.swift in Sources */,
 				D24C49732C33D92B005160B6 /* GetCharacterUseCase.swift in Sources */,
 				D2924A012C344854005F0457 /* ResourceItem.swift in Sources */,
