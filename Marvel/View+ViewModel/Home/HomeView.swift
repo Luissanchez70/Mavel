@@ -16,9 +16,9 @@ struct HomeView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 Text("Characters").font(.title)
-                Carrousel(listOfResourceItem: $viewModel.listOfChracters)
+                Carrousel(listOfItem: $viewModel.listOfChracters)
                 Text("Comics").font(.title)
-                Carrousel(listOfResourceItem: $viewModel.listOfComics)
+                Carrousel(listOfItem: $viewModel.listOfComics)
                 Spacer()
             }.padding()
 

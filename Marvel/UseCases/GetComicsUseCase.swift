@@ -10,9 +10,14 @@ import Combine
 
 class GetComicsUseCase {
     
-    func execute() -> AnyPublisher<[Comic], Error> {
+    func execute(path: TypeOfItem? = nil, id: Int? = nil, type: TypeOfItem) -> AnyPublisher<[Comic], Error> {
         
-        let urlComponents = URLComponents(path: "/comics")
+        let urlComponents = if let path = path, let id = id {
+            URLComponents(path: "\(path)/\(id)/\(type)")
+        } else {
+            URLComponents(path: "/\(type)")
+        }
+        
         let urlRequest = URLRequest(urlComponents: urlComponents)
         return URLSession.shared
             .fetch(urlRequest: urlRequest, type: ResposeComic.self)

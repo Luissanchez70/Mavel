@@ -43,7 +43,7 @@ class HomeViewModel: ObservableObject {
     
     func getComics() {
         
-        getComicsUseCase.execute().sink { completion in
+        getComicsUseCase.execute(type: .comics).sink { completion in
             switch completion {
             case .finished:
                 return

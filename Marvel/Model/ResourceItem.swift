@@ -9,23 +9,26 @@ import Foundation
 
 class ResourceItem {
     
-    var id: Int
+    let id: Int
     let title: String
     let description: String
-    let thumbnail: Thumbnail
+    let thumbnailSTR: String
+    let type: TypeOfItem
     
     init(_ character: Character) {
         self.id = character.id
         self.title = character.name
         self.description = character.description
-        self.thumbnail = character.thumbnail
+        self.thumbnailSTR = character.thumbnail.path.replacingOccurrences(of: "http", with: "https") + "." + character.thumbnail.extension
+        self.type = .characters
     }
     
     init(_ comic: Comic) {
         self.id = comic.id
         self.title = comic.title
         self.description = comic.description ?? "Without Description"
-        self.thumbnail = comic.thumbnail
+        self.thumbnailSTR = comic.thumbnail.path.replacingOccurrences(of: "http", with: "https") + "." + comic.thumbnail.extension
+        self.type = .comics
     }
     
 }

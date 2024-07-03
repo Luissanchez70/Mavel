@@ -14,11 +14,11 @@ struct ResourceItemCell: View {
     var description: String
     
     init(resourceItem: ResourceItem) {
-        self.thumbnailURL = resourceItem.thumbnail.path.replacingOccurrences(of: "http", with: "https") + "." + resourceItem.thumbnail.extension
+        self.thumbnailURL = resourceItem.thumbnailSTR
         self.title = resourceItem.title
         self.description = resourceItem.description
     }
-    
+
     var body: some View {
         VStack(alignment: .center) {
             AsyncImage(url: URL(string: thumbnailURL)) { image in
@@ -28,12 +28,12 @@ struct ResourceItemCell: View {
             }
         
             Spacer()
-        
-            VStack(alignment: .leading) {
-                Text(title)
-                    .font(.system(size: 11, weight: .bold))
-                    .lineLimit(1)
-            }.padding()
+    
+            Text(title)
+                .font(.system(size: 11, weight: .bold))
+                .lineLimit(1)
+                .padding()
+         
             
         }.frame(width: 130, height: 200)
             .background(.white)
