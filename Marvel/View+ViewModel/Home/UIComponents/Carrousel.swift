@@ -21,6 +21,7 @@ struct Carrousel: View {
                 LazyHGrid(rows: [GridItem(.flexible())], spacing: 16){
                     
                     ForEach(listOfItem.indices, id: \.self) { index in
+                        
                         NavigationLink {
                             let viewModel = DetailsViewModel(listOfItem[index])
                             DetailsView(viewModel: viewModel)
